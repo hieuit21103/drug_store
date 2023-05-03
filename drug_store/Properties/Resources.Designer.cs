@@ -63,9 +63,29 @@ namespace drug_store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap a635edfbea20357e6c31 {
+        internal static System.Drawing.Bitmap logo_nha_thuoc_ovn {
             get {
-                object obj = ResourceManager.GetObject("a635edfbea20357e6c31", resourceCulture);
+                object obj = ResourceManager.GetObject("logo_nha_thuoc_ovn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_personas_header {
+            get {
+                object obj = ResourceManager.GetObject("user_personas_header", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_personas_header1 {
+            get {
+                object obj = ResourceManager.GetObject("user_personas_header1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

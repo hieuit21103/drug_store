@@ -1,76 +1,119 @@
-﻿using drug_store.Controller.Basic;
-using drug_store.Controller.Database;
+﻿using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
 
-namespace drug_store
+namespace drug_store.View
 {
     public partial class Home : Form
     {
+        private IconButton currentBtn;
+        private Panel leftBorderBtn;
+        private Form currentChildForm;
         private int type;
         private string username;
 
-        public Home(string username, int type)
+        public Home()//string username, int type)
         {
             InitializeComponent();
-            this.username = username;
-            this.type = type;
+            //this.username = username;
+            //this.type = type;
+            leftBorderBtn = new Panel();
+            leftBorderBtn.Size = new Size(5, 42);
+            panelMenu.Controls.Add(leftBorderBtn);
+            // tu dong full form && thay doi kich thuoc theo click
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private struct RGBColors
         {
-
+            public static Color color1 = Color.FromArgb(172, 126, 241);
+            public static Color color2 = Color.FromArgb(249, 118, 176);
+            public static Color color3 = Color.FromArgb(253, 138, 114);
+            public static Color color4 = Color.FromArgb(95, 77, 221);
+            public static Color color5 = Color.FromArgb(249, 88, 155);
+            public static Color color6 = Color.FromArgb(24, 161, 251);
         }
-
-        private void thựcPhẩmChứcNăngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ActivateButton(object senderBtn, Color color)
         {
+            if (senderBtn != null)
+            {
+                DisableButton();
+                //
+                currentBtn = (IconButton)senderBtn;
+                currentBtn.BackColor = Color.FromArgb(51, 51, 76);
+                currentBtn.ForeColor = color;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.IconColor = color;
+                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                //button
+                leftBorderBtn.BackColor = color;
+                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
+                leftBorderBtn.Visible = true;
+                leftBorderBtn.BringToFront();
+                // doi icon nut home
+                ibtnHome.IconChar = currentBtn.IconChar;
+                ibtnHome.IconColor = color;
 
+            }
         }
-
-        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DisableButton()
         {
+            if (currentBtn != null)
+            {
+                currentBtn.BackColor = Color.FromArgb(51, 51, 76);
+                currentBtn.ForeColor = Color.Gainsboro;
+                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                currentBtn.IconColor = Color.Gainsboro;
+                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            }
         }
-
-        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        private void Reset()
         {
-            Application.Exit();
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            ibtnHome.IconChar = IconChar.Home;
+            ibtnHome.IconColor = Color.MediumPurple;
+            lblHome.Text = "Home";
         }
-
         private void Home_Load(object sender, EventArgs e)
         {
-            string path = Directory.GetCurrentDirectory();
-            Image img = Image.FromFile(Path.Combine(
-                Directory.GetParent(Directory.GetParent(path).FullName).FullName,
-                @"Component\Icon\cart.ico"
-                ));
-            pictureBox1.Image = img;
         }
 
-        private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ibtnAddMedicine_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Add());
         }
 
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenChildForm(Form childForm)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
+            //open only form
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            //End
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(childForm);
+            panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblHome.Text = childForm.Text;
         }
     }
 }

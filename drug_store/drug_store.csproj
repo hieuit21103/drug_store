@@ -119,12 +119,22 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Component\Item.cs" />
-    <Compile Include="View\Account.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Account.Designer.cs">
-      <DependentUpon>Account.cs</DependentUpon>
+    <Compile Include="View\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\Basic\Controller.cs" />
     <Compile Include="View\Edit.cs">
@@ -132,12 +142,6 @@
     </Compile>
     <Compile Include="View\Edit.Designer.cs">
       <DependentUpon>Edit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\GenerateInvoice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\GenerateInvoice.Designer.cs">
-      <DependentUpon>GenerateInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\Database\Database.cs" />
     <Compile Include="Controller\Database\DbController.cs" />
@@ -161,27 +165,23 @@
     <Compile Include="View\ValidCheck.Designer.cs">
       <DependentUpon>ValidCheck.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Account.resx">
-      <DependentUpon>Account.cs</DependentUpon>
+    <EmbeddedResource Include="View\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Edit.resx">
       <DependentUpon>Edit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\GenerateInvoice.resx">
-      <DependentUpon>GenerateInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,15 +216,16 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Component\Icon\cart.ico" />
+    <Content Include="Resources\cart.ico" />
     <Content Include="config.xml" />
+    <None Include="Resources\user-personas-header1.jpg" />
+    <None Include="Resources\user-personas-header.jpg" />
+    <None Include="Resources\logo-nha-thuoc-ovn.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Component\Items\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

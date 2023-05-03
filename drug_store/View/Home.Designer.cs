@@ -1,4 +1,4 @@
-﻿namespace drug_store
+﻿namespace drug_store.View
 {
     partial class Home
     {
@@ -34,6 +34,7 @@
             this.ibtnMedicineVlyCheck = new FontAwesome.Sharp.IconButton();
             this.ibtnModifyMedicine = new FontAwesome.Sharp.IconButton();
             this.ibtnAddMedicine = new FontAwesome.Sharp.IconButton();
+            this.ibtnNewMedicine = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,7 +42,6 @@
             this.ibtnHome = new FontAwesome.Sharp.IconButton();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.ibtnNewMedicine = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,12 +52,12 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.ibtnNewMedicine);
             this.panelMenu.Controls.Add(this.ibtnLogout);
             this.panelMenu.Controls.Add(this.ibtnProfile);
             this.panelMenu.Controls.Add(this.ibtnMedicineVlyCheck);
             this.panelMenu.Controls.Add(this.ibtnModifyMedicine);
             this.panelMenu.Controls.Add(this.ibtnAddMedicine);
+            this.panelMenu.Controls.Add(this.ibtnNewMedicine);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -76,7 +76,7 @@
             this.ibtnLogout.IconColor = System.Drawing.Color.White;
             this.ibtnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnLogout.Location = new System.Drawing.Point(0, 416);
+            this.ibtnLogout.Location = new System.Drawing.Point(0, 491);
             this.ibtnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnLogout.Name = "ibtnLogout";
             this.ibtnLogout.Size = new System.Drawing.Size(220, 69);
@@ -95,7 +95,7 @@
             this.ibtnProfile.IconColor = System.Drawing.Color.White;
             this.ibtnProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnProfile.Location = new System.Drawing.Point(0, 348);
+            this.ibtnProfile.Location = new System.Drawing.Point(0, 423);
             this.ibtnProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnProfile.Name = "ibtnProfile";
             this.ibtnProfile.Size = new System.Drawing.Size(220, 68);
@@ -114,7 +114,7 @@
             this.ibtnMedicineVlyCheck.IconColor = System.Drawing.Color.White;
             this.ibtnMedicineVlyCheck.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnMedicineVlyCheck.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnMedicineVlyCheck.Location = new System.Drawing.Point(0, 273);
+            this.ibtnMedicineVlyCheck.Location = new System.Drawing.Point(0, 348);
             this.ibtnMedicineVlyCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnMedicineVlyCheck.Name = "ibtnMedicineVlyCheck";
             this.ibtnMedicineVlyCheck.Size = new System.Drawing.Size(220, 75);
@@ -133,7 +133,7 @@
             this.ibtnModifyMedicine.IconColor = System.Drawing.Color.White;
             this.ibtnModifyMedicine.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnModifyMedicine.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnModifyMedicine.Location = new System.Drawing.Point(0, 198);
+            this.ibtnModifyMedicine.Location = new System.Drawing.Point(0, 273);
             this.ibtnModifyMedicine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnModifyMedicine.Name = "ibtnModifyMedicine";
             this.ibtnModifyMedicine.Size = new System.Drawing.Size(220, 75);
@@ -152,7 +152,7 @@
             this.ibtnAddMedicine.IconColor = System.Drawing.Color.White;
             this.ibtnAddMedicine.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnAddMedicine.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnAddMedicine.Location = new System.Drawing.Point(0, 122);
+            this.ibtnAddMedicine.Location = new System.Drawing.Point(0, 197);
             this.ibtnAddMedicine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnAddMedicine.Name = "ibtnAddMedicine";
             this.ibtnAddMedicine.Size = new System.Drawing.Size(220, 76);
@@ -160,6 +160,26 @@
             this.ibtnAddMedicine.Text = "Add Medicine";
             this.ibtnAddMedicine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnAddMedicine.UseVisualStyleBackColor = true;
+            this.ibtnAddMedicine.Click += new System.EventHandler(this.ibtnAddMedicine_Click);
+            // 
+            // ibtnNewMedicine
+            // 
+            this.ibtnNewMedicine.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ibtnNewMedicine.FlatAppearance.BorderSize = 0;
+            this.ibtnNewMedicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnNewMedicine.ForeColor = System.Drawing.Color.Transparent;
+            this.ibtnNewMedicine.IconChar = FontAwesome.Sharp.IconChar.FolderTree;
+            this.ibtnNewMedicine.IconColor = System.Drawing.Color.White;
+            this.ibtnNewMedicine.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnNewMedicine.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnNewMedicine.Location = new System.Drawing.Point(0, 122);
+            this.ibtnNewMedicine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ibtnNewMedicine.Name = "ibtnNewMedicine";
+            this.ibtnNewMedicine.Size = new System.Drawing.Size(220, 75);
+            this.ibtnNewMedicine.TabIndex = 13;
+            this.ibtnNewMedicine.Text = "View Medicine";
+            this.ibtnNewMedicine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnNewMedicine.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -174,13 +194,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::drug_store.Properties.Resources.a635edfbea20357e6c31;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Image = global::drug_store.Properties.Resources.logo_nha_thuoc_ovn;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 118);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.Size = new System.Drawing.Size(129, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // panel1
@@ -238,25 +257,6 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1216, 801);
             this.panelDesktop.TabIndex = 0;
-            // 
-            // ibtnNewMedicine
-            // 
-            this.ibtnNewMedicine.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibtnNewMedicine.FlatAppearance.BorderSize = 0;
-            this.ibtnNewMedicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnNewMedicine.ForeColor = System.Drawing.Color.Transparent;
-            this.ibtnNewMedicine.IconChar = FontAwesome.Sharp.IconChar.FolderTree;
-            this.ibtnNewMedicine.IconColor = System.Drawing.Color.White;
-            this.ibtnNewMedicine.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnNewMedicine.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnNewMedicine.Location = new System.Drawing.Point(0, 485);
-            this.ibtnNewMedicine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ibtnNewMedicine.Name = "ibtnNewMedicine";
-            this.ibtnNewMedicine.Size = new System.Drawing.Size(220, 75);
-            this.ibtnNewMedicine.TabIndex = 11;
-            this.ibtnNewMedicine.Text = "View Medicine";
-            this.ibtnNewMedicine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ibtnNewMedicine.UseVisualStyleBackColor = true;
             // 
             // Home
             // 

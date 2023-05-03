@@ -323,3 +323,4 @@
         private FontAwesome.Sharp.IconButton ibtnTailai3;
         private System.Windows.Forms.Panel panel1;
     }
+}

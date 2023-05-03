@@ -3,10 +3,10 @@ using System.Windows.Forms;
 
 namespace drug_store.Controller.Basic
 {
-    public partial class Account : Form
+    public partial class Profile : Form
     {
         int type;
-        public Account(int type)
+        public Profile(int type)
         {
             this.type = type;
             InitializeComponent();
@@ -20,7 +20,6 @@ namespace drug_store.Controller.Basic
                 textBox3.Enabled = false;
                 textBox4.Enabled = false;
                 textBox5.Enabled = false;
-                textBox6.Enabled = false;
             }
         }
     }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace drug_store.Controller.Basic
+namespace drug_store.View
 {
-    public partial class GenerateInvoice : Form
+    public partial class Add : Form
     {
-        public GenerateInvoice()
+        public Add()
         {
             InitializeComponent();
         }
