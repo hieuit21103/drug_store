@@ -130,6 +130,12 @@
     <Compile Include="View\Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Profile.cs">
       <SubType>Form</SubType>
     </Compile>

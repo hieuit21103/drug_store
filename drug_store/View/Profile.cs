@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace drug_store.Controller.Basic
+namespace drug_store.View
 {
     public partial class Profile : Form
     {

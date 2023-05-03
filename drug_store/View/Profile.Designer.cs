@@ -1,4 +1,4 @@
-﻿namespace drug_store.Controller.Basic
+﻿namespace drug_store.View
 {
     partial class Profile
     {

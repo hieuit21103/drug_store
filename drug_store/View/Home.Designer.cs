@@ -84,6 +84,7 @@
             this.ibtnLogout.Text = "Log Out";
             this.ibtnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnLogout.UseVisualStyleBackColor = true;
+            this.ibtnLogout.Click += new System.EventHandler(this.ibtnLogout_Click);
             // 
             // ibtnProfile
             // 
@@ -103,6 +104,7 @@
             this.ibtnProfile.Text = "Profile";
             this.ibtnProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnProfile.UseVisualStyleBackColor = true;
+            this.ibtnProfile.Click += new System.EventHandler(this.ibtnProfile_Click);
             // 
             // ibtnMedicineVlyCheck
             // 
@@ -122,6 +124,7 @@
             this.ibtnMedicineVlyCheck.Text = "Medicine Valid Check";
             this.ibtnMedicineVlyCheck.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnMedicineVlyCheck.UseVisualStyleBackColor = true;
+            this.ibtnMedicineVlyCheck.Click += new System.EventHandler(this.ibtnMedicineVlyCheck_Click);
             // 
             // ibtnModifyMedicine
             // 
@@ -141,6 +144,7 @@
             this.ibtnModifyMedicine.Text = "Modify Medicine";
             this.ibtnModifyMedicine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnModifyMedicine.UseVisualStyleBackColor = true;
+            this.ibtnModifyMedicine.Click += new System.EventHandler(this.ibtnModifyMedicine_Click);
             // 
             // ibtnAddMedicine
             // 
@@ -180,6 +184,7 @@
             this.ibtnNewMedicine.Text = "View Medicine";
             this.ibtnNewMedicine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnNewMedicine.UseVisualStyleBackColor = true;
+            this.ibtnNewMedicine.Click += new System.EventHandler(this.ibtnNewMedicine_Click);
             // 
             // panel2
             // 

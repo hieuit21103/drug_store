@@ -42,7 +42,6 @@ C:\Users\HIEU\Desktop\drug_store\drug_store\obj\Debug\drug_store.Controller.Basi
 C:\Users\HIEU\Desktop\drug_store\drug_store\obj\Debug\drug_store.Controller.Basic.GenerateInvoice.resources
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.csproj.AssemblyReference.cache
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.csproj.SuggestedBindingRedirects.cache
-C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.Controller.Basic.Profile.resources
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.Edit.resources
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.Properties.Resources.resources
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.Login.resources
@@ -85,3 +84,4 @@ C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\System.Runtime.
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.csproj.CopyComplete
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.Add.resources
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.Home.resources
+C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.Profile.resources
