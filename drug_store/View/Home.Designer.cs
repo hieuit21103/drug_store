@@ -45,9 +45,6 @@ namespace drug_store
             this.thôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,16 +53,16 @@ namespace drug_store
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(223, 153);
+            this.listView1.Location = new System.Drawing.Point(12, 153);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(793, 556);
+            this.listView1.Size = new System.Drawing.Size(1004, 556);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(223, 102);
+            this.textBox1.Location = new System.Drawing.Point(12, 101);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(577, 34);
             this.textBox1.TabIndex = 1;
@@ -73,7 +70,7 @@ namespace drug_store
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(822, 102);
+            this.button1.Location = new System.Drawing.Point(611, 102);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 34);
             this.button1.TabIndex = 2;
@@ -142,14 +139,14 @@ namespace drug_store
             // thôngTinToolStripMenuItem
             // 
             this.thôngTinToolStripMenuItem.Name = "thôngTinToolStripMenuItem";
-            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(187, 32);
             this.thôngTinToolStripMenuItem.Text = "Thông tin";
             this.thôngTinToolStripMenuItem.Click += new System.EventHandler(this.thôngTinToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(187, 32);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -162,38 +159,6 @@ namespace drug_store
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(217, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 32);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Tìm kiếm";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.Location = new System.Drawing.Point(12, 153);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 71);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Nhập hàng";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button3.Location = new System.Drawing.Point(12, 230);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(205, 71);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Xuất hoá đơn";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // printPreviewDialog1
             // 
@@ -210,9 +175,6 @@ namespace drug_store
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 713);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -243,9 +205,6 @@ namespace drug_store
         private System.Windows.Forms.ToolStripMenuItem thựcPhẩmChứcNăngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thuốcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thiếtBịYTếToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dượcMỹPhẩmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chămSócCáNhânToolStripMenuItem;
