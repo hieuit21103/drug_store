@@ -69,7 +69,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(336, 43);
-            this.button2.TabIndex = 26;
+            this.button2.TabIndex = 4;
             this.button2.Text = "EXIT";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -86,7 +86,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(336, 43);
-            this.button1.TabIndex = 27;
+            this.button1.TabIndex = 3;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -99,9 +99,10 @@
             this.chkShow.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.chkShow.Name = "chkShow";
             this.chkShow.Size = new System.Drawing.Size(126, 23);
-            this.chkShow.TabIndex = 25;
+            this.chkShow.TabIndex = 2;
             this.chkShow.Text = "Show Password";
             this.chkShow.UseVisualStyleBackColor = true;
+            this.chkShow.CheckedChanged += new System.EventHandler(this.chkShow_CheckedChanged);
             // 
             // label3
             // 
@@ -143,10 +144,9 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(57, 212);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(336, 34);
-            this.textBox1.TabIndex = 32;
+            this.textBox1.Size = new System.Drawing.Size(336, 19);
+            this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
@@ -154,10 +154,11 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(56, 325);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(336, 34);
-            this.textBox2.TabIndex = 32;
+            this.textBox2.Size = new System.Drawing.Size(336, 19);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Login
             // 

@@ -31,6 +31,7 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.ibtnLogout = new FontAwesome.Sharp.IconButton();
             this.ibtnProfile = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.ibtnMedicineVlyCheck = new FontAwesome.Sharp.IconButton();
             this.ibtnModifyMedicine = new FontAwesome.Sharp.IconButton();
             this.ibtnAddMedicine = new FontAwesome.Sharp.IconButton();
@@ -54,6 +55,7 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.ibtnLogout);
             this.panelMenu.Controls.Add(this.ibtnProfile);
+            this.panelMenu.Controls.Add(this.iconButton1);
             this.panelMenu.Controls.Add(this.ibtnMedicineVlyCheck);
             this.panelMenu.Controls.Add(this.ibtnModifyMedicine);
             this.panelMenu.Controls.Add(this.ibtnAddMedicine);
@@ -76,7 +78,7 @@
             this.ibtnLogout.IconColor = System.Drawing.Color.White;
             this.ibtnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnLogout.Location = new System.Drawing.Point(0, 491);
+            this.ibtnLogout.Location = new System.Drawing.Point(0, 566);
             this.ibtnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnLogout.Name = "ibtnLogout";
             this.ibtnLogout.Size = new System.Drawing.Size(220, 69);
@@ -96,7 +98,7 @@
             this.ibtnProfile.IconColor = System.Drawing.Color.White;
             this.ibtnProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnProfile.Location = new System.Drawing.Point(0, 423);
+            this.ibtnProfile.Location = new System.Drawing.Point(0, 498);
             this.ibtnProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnProfile.Name = "ibtnProfile";
             this.ibtnProfile.Size = new System.Drawing.Size(220, 68);
@@ -105,6 +107,26 @@
             this.ibtnProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnProfile.UseVisualStyleBackColor = true;
             this.ibtnProfile.Click += new System.EventHandler(this.ibtnProfile_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.Transparent;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 423);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(220, 75);
+            this.iconButton1.TabIndex = 14;
+            this.iconButton1.Text = "Sell Medicine";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // ibtnMedicineVlyCheck
             // 
@@ -301,5 +323,6 @@
         private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconButton ibtnProfile;
         private FontAwesome.Sharp.IconButton ibtnNewMedicine;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

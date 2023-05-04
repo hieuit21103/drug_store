@@ -53,7 +53,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(33, 153);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1099, 452);
@@ -69,18 +69,18 @@
             this.ibtnsearchf3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnsearchf3.IconSize = 30;
             this.ibtnsearchf3.Location = new System.Drawing.Point(1003, 80);
-            this.ibtnsearchf3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ibtnsearchf3.Margin = new System.Windows.Forms.Padding(4);
             this.ibtnsearchf3.Name = "ibtnsearchf3";
             this.ibtnsearchf3.Size = new System.Drawing.Size(129, 46);
             this.ibtnsearchf3.TabIndex = 2;
-            this.ibtnsearchf3.Text = "Search";
-            this.ibtnsearchf3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnsearchf3.Text = "Tìm kiếm";
+            this.ibtnsearchf3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ibtnsearchf3.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(687, 91);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(283, 35);
@@ -97,7 +97,7 @@
             this.ibtnbin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnbin.IconSize = 30;
             this.ibtnbin.Location = new System.Drawing.Point(997, 613);
-            this.ibtnbin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ibtnbin.Margin = new System.Windows.Forms.Padding(4);
             this.ibtnbin.Name = "ibtnbin";
             this.ibtnbin.Size = new System.Drawing.Size(135, 46);
             this.ibtnbin.TabIndex = 9;
@@ -124,7 +124,7 @@
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
-            // frmNewMedicine
+            // List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -136,8 +136,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frmNewMedicine";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "List";
             this.Text = "frmNewMedicine";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace drug_store.View
 {
-    public partial class Edit : Form
+    public partial class Sell : Form
     {
-        public Edit()
+        public Sell()
         {
             InitializeComponent();
-        }
-
-        private void ibtnTailai3_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

@@ -21,11 +21,11 @@ namespace drug_store.View
         private int type;
         private string username;
 
-        public Home()//string username, int type)
+        public Home(string username, int type)
         {
             InitializeComponent();
-            //this.username = username;
-            //this.type = type;
+            this.username = username;
+            this.type = type;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(5, 42);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -112,7 +112,10 @@ namespace drug_store.View
 
         private void ibtnAddMedicine_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Add());
+            if (type == 0)
+            {
+                OpenChildForm(new Add());
+            }
         }
         private void ibtnNewMedicine_Click(object sender, EventArgs e)
         {
@@ -121,7 +124,10 @@ namespace drug_store.View
 
         private void ibtnModifyMedicine_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Edit());
+            if (type == 0)
+            {
+                OpenChildForm(new Edit());
+            }
         }
 
         private void ibtnMedicineVlyCheck_Click(object sender, EventArgs e)
@@ -139,6 +145,11 @@ namespace drug_store.View
             this.Close();
             Login login = new Login();
             login.Show();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Sell());
         }
     }
 }

@@ -85,3 +85,5 @@ C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.cspr
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.Add.resources
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.Home.resources
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.Profile.resources
+C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.List.resources
+C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.Sell.resources
