@@ -88,7 +88,7 @@ namespace drug_store.View
             ibtnHome.IconColor = Color.MediumPurple;
             lblHome.Text = "Home";
         }
-        private void OpenChildForm(Form childForm)
+        public void OpenChildForm(Form childForm)
         {
             //open only form
             if (currentChildForm != null)
@@ -119,15 +119,7 @@ namespace drug_store.View
         }
         private void ibtnNewMedicine_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new List());
-        }
-
-        private void ibtnModifyMedicine_Click(object sender, EventArgs e)
-        {
-            if (type == 0)
-            {
-                OpenChildForm(new Edit());
-            }
+            OpenChildForm(new List(this,type));
         }
 
         private void ibtnMedicineVlyCheck_Click(object sender, EventArgs e)
@@ -150,6 +142,21 @@ namespace drug_store.View
         private void iconButton1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Sell());
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblHome_Click(object sender, EventArgs e)
+        {
+            currentChildForm.Close();
+        }
+
+        private void ibtnHome_Click(object sender, EventArgs e)
+        {
+            currentChildForm.Close();
         }
     }
 }

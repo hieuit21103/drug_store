@@ -1,4 +1,5 @@
-﻿using System;
+﻿using drug_store.Controller.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace drug_store.View
         public ValidCheck()
         {
             InitializeComponent();
+        }
+
+        private void ValidCheck_Load(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = 0;
         }
     }
 }

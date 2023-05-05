@@ -33,7 +33,6 @@
             this.ibtnProfile = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.ibtnMedicineVlyCheck = new FontAwesome.Sharp.IconButton();
-            this.ibtnModifyMedicine = new FontAwesome.Sharp.IconButton();
             this.ibtnAddMedicine = new FontAwesome.Sharp.IconButton();
             this.ibtnNewMedicine = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -43,6 +42,7 @@
             this.ibtnHome = new FontAwesome.Sharp.IconButton();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,11 +53,11 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.iconButton2);
             this.panelMenu.Controls.Add(this.ibtnLogout);
             this.panelMenu.Controls.Add(this.ibtnProfile);
             this.panelMenu.Controls.Add(this.iconButton1);
             this.panelMenu.Controls.Add(this.ibtnMedicineVlyCheck);
-            this.panelMenu.Controls.Add(this.ibtnModifyMedicine);
             this.panelMenu.Controls.Add(this.ibtnAddMedicine);
             this.panelMenu.Controls.Add(this.ibtnNewMedicine);
             this.panelMenu.Controls.Add(this.panel2);
@@ -78,7 +78,7 @@
             this.ibtnLogout.IconColor = System.Drawing.Color.White;
             this.ibtnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnLogout.Location = new System.Drawing.Point(0, 566);
+            this.ibtnLogout.Location = new System.Drawing.Point(0, 491);
             this.ibtnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnLogout.Name = "ibtnLogout";
             this.ibtnLogout.Size = new System.Drawing.Size(220, 69);
@@ -98,7 +98,7 @@
             this.ibtnProfile.IconColor = System.Drawing.Color.White;
             this.ibtnProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnProfile.Location = new System.Drawing.Point(0, 498);
+            this.ibtnProfile.Location = new System.Drawing.Point(0, 423);
             this.ibtnProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnProfile.Name = "ibtnProfile";
             this.ibtnProfile.Size = new System.Drawing.Size(220, 68);
@@ -118,7 +118,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 423);
+            this.iconButton1.Location = new System.Drawing.Point(0, 348);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(220, 75);
@@ -138,7 +138,7 @@
             this.ibtnMedicineVlyCheck.IconColor = System.Drawing.Color.White;
             this.ibtnMedicineVlyCheck.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnMedicineVlyCheck.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnMedicineVlyCheck.Location = new System.Drawing.Point(0, 348);
+            this.ibtnMedicineVlyCheck.Location = new System.Drawing.Point(0, 273);
             this.ibtnMedicineVlyCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnMedicineVlyCheck.Name = "ibtnMedicineVlyCheck";
             this.ibtnMedicineVlyCheck.Size = new System.Drawing.Size(220, 75);
@@ -147,26 +147,6 @@
             this.ibtnMedicineVlyCheck.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnMedicineVlyCheck.UseVisualStyleBackColor = true;
             this.ibtnMedicineVlyCheck.Click += new System.EventHandler(this.ibtnMedicineVlyCheck_Click);
-            // 
-            // ibtnModifyMedicine
-            // 
-            this.ibtnModifyMedicine.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ibtnModifyMedicine.FlatAppearance.BorderSize = 0;
-            this.ibtnModifyMedicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnModifyMedicine.ForeColor = System.Drawing.Color.Transparent;
-            this.ibtnModifyMedicine.IconChar = FontAwesome.Sharp.IconChar.BookMedical;
-            this.ibtnModifyMedicine.IconColor = System.Drawing.Color.White;
-            this.ibtnModifyMedicine.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnModifyMedicine.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnModifyMedicine.Location = new System.Drawing.Point(0, 273);
-            this.ibtnModifyMedicine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ibtnModifyMedicine.Name = "ibtnModifyMedicine";
-            this.ibtnModifyMedicine.Size = new System.Drawing.Size(220, 75);
-            this.ibtnModifyMedicine.TabIndex = 6;
-            this.ibtnModifyMedicine.Text = "Modify Medicine";
-            this.ibtnModifyMedicine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ibtnModifyMedicine.UseVisualStyleBackColor = true;
-            this.ibtnModifyMedicine.Click += new System.EventHandler(this.ibtnModifyMedicine_Click);
             // 
             // ibtnAddMedicine
             // 
@@ -251,6 +231,7 @@
             this.lblHome.Size = new System.Drawing.Size(44, 16);
             this.lblHome.TabIndex = 1;
             this.lblHome.Text = "Home";
+            this.lblHome.Click += new System.EventHandler(this.lblHome_Click);
             // 
             // ibtnHome
             // 
@@ -266,6 +247,7 @@
             this.ibtnHome.Size = new System.Drawing.Size(81, 47);
             this.ibtnHome.TabIndex = 0;
             this.ibtnHome.UseVisualStyleBackColor = true;
+            this.ibtnHome.Click += new System.EventHandler(this.ibtnHome_Click);
             // 
             // panelShadow
             // 
@@ -284,6 +266,26 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(1216, 801);
             this.panelDesktop.TabIndex = 0;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.ForeColor = System.Drawing.Color.Transparent;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(0, 560);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(220, 69);
+            this.iconButton2.TabIndex = 15;
+            this.iconButton2.Text = "Exit";
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // Home
             // 
@@ -314,7 +316,6 @@
         private FontAwesome.Sharp.IconButton ibtnAddMedicine;
         private FontAwesome.Sharp.IconButton ibtnLogout;
         private FontAwesome.Sharp.IconButton ibtnMedicineVlyCheck;
-        private FontAwesome.Sharp.IconButton ibtnModifyMedicine;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton ibtnHome;
@@ -324,5 +325,6 @@
         private FontAwesome.Sharp.IconButton ibtnProfile;
         private FontAwesome.Sharp.IconButton ibtnNewMedicine;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }

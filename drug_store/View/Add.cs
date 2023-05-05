@@ -26,8 +26,7 @@ namespace drug_store.View
             textBox3.Clear();
             textBox4.Clear();
             textBox6.Clear();
-            textBox7.Clear();
-            comboBox1.SelectedIndex = -1;
+            comboBox1.SelectedIndex = 0;
             dateTimePicker1.ResetText();
             dateTimePicker2.ResetText();
         }
@@ -46,12 +45,17 @@ namespace drug_store.View
                 string gia = textBox3.Text;
                 string soluong = textBox4.Text;
                 string idnsx = textBox6.Text;
-                string ghichu = textBox7.Text;
                 string idnhom = comboBox1.SelectedIndex.ToString();
                 string nsx = dateTimePicker1.Text;
                 string hsd = dateTimePicker2.Text;
-                string command = $"INSERT INTO THUOC VALUES({idthuoc},{idnhom},{idnsx},{soluong},{gia},{tenthuoc},{ghichu},{nsx},{hsd})";
-                controller.querry(command);                
+                if (Int32.TryParse(idthuoc, out int i) && Int32.TryParse(idnsx,out int i1) && Int32.TryParse(idnhom,out int i2) && Int32.TryParse(soluong,out int i3) && Int32.TryParse(gia,out int i4)){
+                    string command = $"INSERT INTO THUOC VALUES({idthuoc},{idnhom},{idnsx},{soluong},{gia},'{tenthuoc}','{nsx}','{hsd}')";
+                    controller.querry(command);
+                }
+                else
+                {
+                    MessageBox.Show("Sai kiểu dữ liệu");
+                }
             }
         }
         private bool IsTextBoxEmpty()
@@ -61,7 +65,14 @@ namespace drug_store.View
 
         private void Add_Load(object sender, EventArgs e)
         {
-
+            DbController controller = new DbController();
+            List<string> list = controller.getType();
+            controller.close();
+            foreach (string type in list)
+            {
+                comboBox1.Items.Add(type);
+            }
+            comboBox1.SelectedIndex = 0;
         }
     }
 
