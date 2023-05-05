@@ -43,7 +43,7 @@ namespace drug_store.Controller
             paragraph.Range.Font.Bold = 0;
             paragraph.Range.Font.Size = 16;
             paragraph.Format.SpaceAfter = 12;
-            Table table = document.Tables.Add(paragraph.Range, size + 2, 4);
+            Table table = document.Tables.Add(paragraph.Range, size + 1, 4);
             table.Borders.Enable = 1;
             table.Rows[1].Cells[1].Range.Text = "STT";
             table.Rows[1].Cells[2].Range.Text = "Tên sản phẩm";
@@ -63,9 +63,9 @@ namespace drug_store.Controller
                     paid += float.Parse((Int32.Parse(data[4]) * quantity[j]).ToString());
                 }
             }
-            table.Rows[size + 2].Cells[1].Range.Text = "Tổng";
-            table.Rows[size + 2].Cells[3].Range.Text = total.ToString();
-            table.Rows[size + 2].Cells[4].Range.Text = paid.ToString();
+            table.Rows[size + 1].Cells[1].Range.Text = "Tổng";
+            table.Rows[size + 1].Cells[3].Range.Text = total.ToString();
+            table.Rows[size + 1].Cells[4].Range.Text = paid.ToString();
             TimeZoneInfo localTimeZone = TimeZoneInfo.Local;
             DateTimeOffset now = TimeZoneInfo.ConvertTime(DateTimeOffset.Now, localTimeZone);
             DateTime today = now.DateTime;
