@@ -14,6 +14,7 @@ namespace drug_store.View
 {
     public partial class List : Form
     {
+        private int id = -1;
         private int type;
         private Home parent;
         public List(Home parent,int type)
@@ -24,8 +25,7 @@ namespace drug_store.View
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
-        {
-            int id = -1;
+        { 
             if(type == 0)
             {
                 if(dataGridView1.SelectedRows.Count > 0)
@@ -52,7 +52,8 @@ namespace drug_store.View
 
         private void ibtnbin_Click(object sender, EventArgs e)
         {
-
+            DbController controller = new DbController();
+            controller.querry($"DELETE FROM THUOC WHERE ID={id}");
         }
 
         private void List_Load(object sender, EventArgs e)
