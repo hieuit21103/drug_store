@@ -1,7 +1,7 @@
-﻿using System;
+﻿using drug_store.Controller.Database;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using drug_store.Controller.Database;
 
 namespace drug_store.View
 {

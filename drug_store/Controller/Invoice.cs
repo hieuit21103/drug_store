@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Printing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using drug_store.Controller.Database;
-using Google.Protobuf.Reflection;
+﻿using drug_store.Controller.Database;
 using Microsoft.Office.Interop.Word;
+using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace drug_store.Controller
 {
@@ -16,7 +11,8 @@ namespace drug_store.Controller
         private int size;
         private List<int> id;
         private List<int> quantity;
-        public Invoice(List<int> id,List<int> quantity,int size) { 
+        public Invoice(List<int> id, List<int> quantity, int size)
+        {
             this.id = id;
             this.quantity = quantity;
             this.size = size;
@@ -73,6 +69,12 @@ namespace drug_store.Controller
             string projectPath = Directory.GetParent(Directory.GetParent(debugPath).FullName).FullName;
             document.SaveAs($"{projectPath}\\Invoices\\{today.ToString("dd-MM-yyyy hh-mm-ss")}.docx");
             wordApp.Quit();
+            dbController.close();
+        }
+
+        public void save()
+        {
+
         }
     }
 }

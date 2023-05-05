@@ -133,7 +133,7 @@ namespace drug_store.View
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Sell());
+            OpenChildForm(new Sell(username));
         }
 
         private void iconButton2_Click(object sender, EventArgs e)

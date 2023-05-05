@@ -104,15 +104,15 @@ namespace drug_store.Controller.Database
             return list;
         }
 
-        public Dictionary<int,string> getDataList(string tableName,string columnName)
+        public Dictionary<int, string> getDataList(string tableName, string columnName)
         {
-            Dictionary<int,string> result = new Dictionary<int, string>();
+            Dictionary<int, string> result = new Dictionary<int, string>();
             string cmd = $"SELECT id,{columnName} from {tableName}";
             SQLiteCommand command = new SQLiteCommand(cmd, connection);
             SQLiteDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                result.Add(Int32.Parse(reader["id"].ToString()),reader[columnName].ToString());
+                result.Add(Int32.Parse(reader["id"].ToString()), reader[columnName].ToString());
             }
             return result;
         }

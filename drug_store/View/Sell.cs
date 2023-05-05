@@ -1,16 +1,17 @@
-﻿using drug_store.Controller.Database;
-using drug_store.Controller;
+﻿using drug_store.Controller;
+using drug_store.Controller.Database;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Linq;
 
 namespace drug_store.View
 {
     public partial class Sell : Form
     {
-        public Sell()
+        private string username;
+        public Sell(string username)
         {
+            this.username = username;
             InitializeComponent();
         }
 
@@ -54,7 +55,7 @@ namespace drug_store.View
             int n = dataGridView1.SelectedCells.Count;
             if (n > 0)
             {
-                for (int i = n-1; i >= 0; i--)
+                for (int i = n - 1; i >= 0; i--)
                 {
                     int selectedRows = dataGridView1.SelectedCells[i].RowIndex;
                     dataGridView1.Rows.RemoveAt(selectedRows);
@@ -67,9 +68,9 @@ namespace drug_store.View
             int size = dataGridView1.Rows.Count;
             List<int> id = new List<int>();
             List<int> quantity = new List<int>();
-            if(size > 0)
+            if (size > 0)
             {
-                for(int i = 0; i < size; i++)
+                for (int i = 0; i < size; i++)
                 {
                     int id1 = Int32.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString());
                     int quantity1 = Int32.Parse(dataGridView1.Rows[i].Cells[7].Value.ToString());
@@ -83,7 +84,7 @@ namespace drug_store.View
             {
                 MessageBox.Show("Vui lòng chọn sản phẩm!");
             }
-            
+
         }
     }
 }
