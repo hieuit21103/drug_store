@@ -1,13 +1,7 @@
 ﻿using drug_store.Controller.Database;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SQLite;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace drug_store.View
@@ -33,8 +27,8 @@ namespace drug_store.View
 
         private void ibtnThemf2_Click(object sender, EventArgs e)
         {
-            DbController controller = new DbController(); 
-            if(IsTextBoxEmpty())
+            DbController controller = new DbController();
+            if (IsTextBoxEmpty())
             {
                 MessageBox.Show("Thiếu dữ liệu", "Lỗi!");
             }
@@ -48,7 +42,8 @@ namespace drug_store.View
                 string idnhom = comboBox1.SelectedIndex.ToString();
                 string nsx = dateTimePicker1.Text;
                 string hsd = dateTimePicker2.Text;
-                if (Int32.TryParse(idthuoc, out int i) && Int32.TryParse(idnsx,out int i1) && Int32.TryParse(idnhom,out int i2) && Int32.TryParse(soluong,out int i3) && Int32.TryParse(gia,out int i4)){
+                if (Int32.TryParse(idthuoc, out int i) && Int32.TryParse(idnsx, out int i1) && Int32.TryParse(idnhom, out int i2) && Int32.TryParse(soluong, out int i3) && Int32.TryParse(gia, out int i4))
+                {
                     string command = $"INSERT INTO THUOC VALUES({idthuoc},{idnhom},{idnsx},{soluong},{gia},'{tenthuoc}','{nsx}','{hsd}')";
                     controller.querry(command);
                 }

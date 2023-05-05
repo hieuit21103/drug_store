@@ -1,13 +1,7 @@
 ﻿using drug_store.Controller.Database;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace drug_store.View
@@ -17,7 +11,7 @@ namespace drug_store.View
         private int id;
         private int type;
         private Home oppa;
-        public Edit(Home oppa,int type,int id)
+        public Edit(Home oppa, int type, int id)
         {
             this.type = type;
             this.oppa = oppa;
@@ -65,7 +59,7 @@ namespace drug_store.View
                 string gia = textBox5.Text;
                 if (Int32.TryParse(textBox4.Text, out int value))
                 {
-                     soluong = (int)(Int32.Parse(textBox4.Text) + numericUpDown1.Value);
+                    soluong = (int)(Int32.Parse(textBox4.Text) + numericUpDown1.Value);
                 }
                 else
                 {

@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using System.Xml.Serialization;
-using System.Data.SQLite;
 using System.Data;
+using System.Data.SQLite;
+using System.Windows.Forms;
 
 namespace drug_store.Controller.Database
 {
@@ -20,9 +15,10 @@ namespace drug_store.Controller.Database
             connectionString = new Database().connectionString;
             try
             {
-               connection = new SQLiteConnection("data source="+connectionString+";");
-               connection.Open();
-            }catch (Exception ex)
+                connection = new SQLiteConnection("data source=" + connectionString + ";");
+                connection.Open();
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -35,7 +31,7 @@ namespace drug_store.Controller.Database
                 command.ExecuteNonQuery();
                 connection.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -47,7 +43,7 @@ namespace drug_store.Controller.Database
             try
             {
                 string cmd = $"SELECT matkhau, loai FROM taikhoan WHERE taikhoan='{username}'";
-                SQLiteCommand command = new SQLiteCommand(cmd,connection);
+                SQLiteCommand command = new SQLiteCommand(cmd, connection);
                 SQLiteDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -69,7 +65,7 @@ namespace drug_store.Controller.Database
         public DataTable getDataTable(string tableName)
         {
             string query = $"SELECT * FROM {tableName}";
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter(query,connection);
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, connection);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             return dt;
@@ -79,7 +75,7 @@ namespace drug_store.Controller.Database
         {
             List<string> types = new List<string>();
             string cmd = "SELECT * FROM NHOMTHUOC";
-            SQLiteCommand command = new SQLiteCommand(cmd,connection);
+            SQLiteCommand command = new SQLiteCommand(cmd, connection);
             SQLiteDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {

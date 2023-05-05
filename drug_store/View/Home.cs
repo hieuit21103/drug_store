@@ -1,15 +1,7 @@
 ﻿using FontAwesome.Sharp;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using FontAwesome.Sharp;
 
 namespace drug_store.View
 {
@@ -119,7 +111,7 @@ namespace drug_store.View
         }
         private void ibtnNewMedicine_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new List(this,type));
+            OpenChildForm(new List(this, type));
         }
 
         private void ibtnMedicineVlyCheck_Click(object sender, EventArgs e)

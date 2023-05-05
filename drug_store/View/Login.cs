@@ -1,12 +1,5 @@
 ﻿using drug_store.Controller.Database;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace drug_store.View
@@ -21,7 +14,7 @@ namespace drug_store.View
 
         private void Login_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 button1.PerformClick();
             }
@@ -31,11 +24,11 @@ namespace drug_store.View
         {
             DbController dbController = new DbController();
             string username = textBox1.Text;
-            string password = textBox2.Text;  
+            string password = textBox2.Text;
             int type = dbController.check(username, password);
-            if(type != -1)
+            if (type != -1)
             {
-                Home home = new Home(username,type);
+                Home home = new Home(username, type);
                 home.Show();
                 Hide();
             }
@@ -56,7 +49,7 @@ namespace drug_store.View
 
         private void chkShow_CheckedChanged(object sender, EventArgs e)
         {
-            if(chkShow.Checked)
+            if (chkShow.Checked)
             {
                 textBox2.UseSystemPasswordChar = false;
             }

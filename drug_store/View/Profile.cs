@@ -14,7 +14,8 @@ namespace drug_store.View
 
         private void Account_Load(object sender, EventArgs e)
         {
-            if(type == 1) {
+            if (type == 1)
+            {
                 textBox1.Enabled = false;
                 textBox2.Enabled = false;
                 textBox3.Enabled = false;
