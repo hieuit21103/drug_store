@@ -14,7 +14,7 @@ namespace drug_store.View
         private void Sell_Load(object sender, EventArgs e)
         {
             DbController controller = new DbController();
-            dataGridView1.DataSource = controller.getDataTable("thuoc");
+            dataGridView2.DataSource = controller.getDataTable("thuoc");
             controller.close();
         }
     }
