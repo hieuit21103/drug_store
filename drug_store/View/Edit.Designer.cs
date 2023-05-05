@@ -154,7 +154,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(788, 104);
@@ -165,7 +165,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(788, 166);
@@ -215,6 +215,7 @@
             this.ibtnThemf3.Text = "Thêm";
             this.ibtnThemf3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnThemf3.UseVisualStyleBackColor = false;
+            this.ibtnThemf3.Click += new System.EventHandler(this.ibtnThemf3_Click);
             // 
             // ibtnTailai3
             // 
@@ -223,7 +224,7 @@
             this.ibtnTailai3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ibtnTailai3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.ibtnTailai3.ForeColor = System.Drawing.Color.White;
-            this.ibtnTailai3.IconChar = FontAwesome.Sharp.IconChar.Rotate;
+            this.ibtnTailai3.IconChar = FontAwesome.Sharp.IconChar.BackwardStep;
             this.ibtnTailai3.IconColor = System.Drawing.Color.LightBlue;
             this.ibtnTailai3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnTailai3.IconSize = 30;
@@ -233,7 +234,7 @@
             this.ibtnTailai3.Name = "ibtnTailai3";
             this.ibtnTailai3.Size = new System.Drawing.Size(133, 49);
             this.ibtnTailai3.TabIndex = 5;
-            this.ibtnTailai3.Text = "Tải Lại";
+            this.ibtnTailai3.Text = "Quay lại";
             this.ibtnTailai3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnTailai3.UseVisualStyleBackColor = false;
             this.ibtnTailai3.Click += new System.EventHandler(this.ibtnTailai3_Click);

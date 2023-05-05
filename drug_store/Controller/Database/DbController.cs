@@ -65,6 +65,7 @@ namespace drug_store.Controller.Database
             return type;
         }
 
+
         public DataTable getDataTable(string tableName)
         {
             string query = $"SELECT * FROM {tableName}";
