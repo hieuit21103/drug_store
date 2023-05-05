@@ -1,5 +1,4 @@
-﻿using drug_store.Controller.Basic;
-using drug_store.Controller.Database;
+﻿using drug_store.Controller.Database;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -62,8 +61,6 @@ namespace drug_store.View
 
         private void ibtnThanhToanIn_Click(object sender, EventArgs e)
         {
-            Controller.Basic.Controller controller = new Controller.Basic.Controller();
-            controller.generateInvoice();
         }
     }
 }
