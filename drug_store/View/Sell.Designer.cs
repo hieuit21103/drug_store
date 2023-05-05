@@ -37,6 +37,14 @@
             this.ibtnThanhToanIn = new FontAwesome.Sharp.IconButton();
             this.ibtnLoaiBo = new FontAwesome.Sharp.IconButton();
             this.ibtncar = new FontAwesome.Sharp.IconButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -55,8 +63,19 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
             this.dataGridView1.Location = new System.Drawing.Point(29, 458);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
@@ -130,6 +149,7 @@
             this.ibtnThanhToanIn.Text = "Thanh Toán";
             this.ibtnThanhToanIn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ibtnThanhToanIn.UseVisualStyleBackColor = false;
+            this.ibtnThanhToanIn.Click += new System.EventHandler(this.ibtnThanhToanIn_Click);
             // 
             // ibtnLoaiBo
             // 
@@ -149,6 +169,7 @@
             this.ibtnLoaiBo.Text = "Loại Bỏ";
             this.ibtnLoaiBo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ibtnLoaiBo.UseVisualStyleBackColor = false;
+            this.ibtnLoaiBo.Click += new System.EventHandler(this.ibtnLoaiBo_Click);
             // 
             // ibtncar
             // 
@@ -168,6 +189,62 @@
             this.ibtncar.Text = "Thêm Vào Giỏ Hàng";
             this.ibtncar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ibtncar.UseVisualStyleBackColor = false;
+            this.ibtncar.Click += new System.EventHandler(this.ibtncar_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "id";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "idnhom";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "idnsx";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "giaban";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "tenthuoc";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "nsx";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "hsd";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "soluong";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
             // 
             // Sell
             // 
@@ -205,5 +282,13 @@
         private System.Windows.Forms.TextBox textBox1;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }
