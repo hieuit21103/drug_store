@@ -1,7 +1,9 @@
 ﻿using drug_store.Controller.Database;
+using drug_store.Controller;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace drug_store.View
 {
@@ -44,6 +46,7 @@ namespace drug_store.View
                 row.Cells[i].Value = data[i];
             }
             dataGridView1.Rows.Add(row);
+            row.Cells[7].Value = 1;
         }
 
         private void ibtnLoaiBo_Click(object sender, EventArgs e)
@@ -61,6 +64,26 @@ namespace drug_store.View
 
         private void ibtnThanhToanIn_Click(object sender, EventArgs e)
         {
+            int size = dataGridView1.Rows.Count;
+            List<int> id = new List<int>();
+            List<int> quantity = new List<int>();
+            if(size > 0)
+            {
+                for(int i = 0; i < size; i++)
+                {
+                    int id1 = Int32.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                    int quantity1 = Int32.Parse(dataGridView1.Rows[i].Cells[7].Value.ToString());
+                    id.Add(id1);
+                    quantity.Add(quantity1);
+                }
+                Invoice invoice = new Invoice(id, quantity, size);
+                invoice.generate();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm!");
+            }
+            
         }
     }
 }

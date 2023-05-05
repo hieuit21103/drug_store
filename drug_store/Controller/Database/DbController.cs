@@ -86,7 +86,6 @@ namespace drug_store.Controller.Database
 
         public List<string> getMedData(int id)
         {
-            int i = 0;
             List<string> list = new List<string>();
             string cmd = $"SELECT * FROM THUOC WHERE ID={id}";
             SQLiteCommand command = new SQLiteCommand(cmd, connection);

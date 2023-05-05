@@ -91,8 +91,4 @@ C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\SqlServerTypes\
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
-C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\Microsoft.ReportViewer.Common.dll
-C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\Microsoft.ReportViewer.WebForms.dll
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\Microsoft.SqlServer.Types.dll
-C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
-C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
