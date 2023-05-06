@@ -121,7 +121,7 @@ namespace drug_store.View
 
         private void ibtnProfile_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Profile(type));
+            OpenChildForm(new Profile(username,type));
         }
 
         private void ibtnLogout_Click(object sender, EventArgs e)

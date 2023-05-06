@@ -58,5 +58,21 @@ namespace drug_store.View
                 textBox2.UseSystemPasswordChar = true;
             }
         }
+
+        private void Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
     }
 }

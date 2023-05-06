@@ -66,6 +66,7 @@
             this.ibtnsearchf3.Text = "Tìm kiếm";
             this.ibtnsearchf3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ibtnsearchf3.UseVisualStyleBackColor = false;
+            this.ibtnsearchf3.Click += new System.EventHandler(this.ibtnsearchf3_Click);
             // 
             // textBox1
             // 
@@ -75,6 +76,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(283, 35);
             this.textBox1.TabIndex = 3;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // ibtnbin
             // 

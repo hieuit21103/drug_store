@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Bcpg.OpenPgp;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
@@ -61,6 +62,15 @@ namespace drug_store.Controller.Database
             return type;
         }
 
+        public DataTable search(string tableName, string key, string value)
+        {
+            string querry = $"SELECT * FROM {tableName} WHERE {key} LIKE '%{value}%'";
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(querry, connection);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
+
 
         public DataTable getDataTable(string tableName)
         {
@@ -115,6 +125,25 @@ namespace drug_store.Controller.Database
                 result.Add(Int32.Parse(reader["id"].ToString()), reader[columnName].ToString());
             }
             return result;
+        }
+
+        public List<string> getSenderData(string username)
+        {
+            List<string> data = new List<string>();
+            string cmd = $"SELECT * FROM NHANVIEN INNER JOIN TAIKHOAN ON NHANVIEN.ID = TAIKHOAN.IDNV WHERE TAIKHOAN.TAIKHOAN= '{username}'";
+            SQLiteCommand command = new SQLiteCommand(cmd, connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                data.Add(reader["id"].ToString());
+                data.Add(reader["ten"].ToString());
+                data.Add(reader["gioitinh"].ToString());
+                data.Add(reader["diachi"].ToString());
+                data.Add(reader["sdt"].ToString());
+                data.Add(reader["email"].ToString());
+                data.Add(reader["ngaylam"].ToString());
+            }
+            return data;
         }
         public void close()
         {

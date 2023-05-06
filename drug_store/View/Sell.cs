@@ -19,6 +19,14 @@ namespace drug_store.View
         {
             DbController controller = new DbController();
             dataGridView2.DataSource = controller.getDataTable("thuoc");
+            List<string> types = controller.getType();
+            comboBox1.Items.Add("None");
+            comboBox1.SelectedIndex = 0;
+            foreach (string type in types)
+            {
+                comboBox1.Items.Add(type);
+            }
+            
             controller.close();
         }
 
@@ -78,13 +86,50 @@ namespace drug_store.View
                     quantity.Add(quantity1);
                 }
                 Invoice invoice = new Invoice(id, quantity, size);
-                invoice.generate();
+                invoice.generate(username);
             }
             else
             {
                 MessageBox.Show("Vui lòng chọn sản phẩm!");
             }
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            DbController controller = new DbController();
+            if (textBox1.Text != "")
+            {
+                dataGridView2.DataSource = controller.search("thuoc", "tenthuoc", textBox1.Text);
+            }
+            else
+            {
+                dataGridView2.DataSource = controller.getDataTable("thuoc");
+            }
+            controller.close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DbController controller = new DbController();
+            if (comboBox1.SelectedIndex == 0)
+            {
+                dataGridView2.DataSource = controller.getDataTable("thuoc");
+            }
+            else
+            {
+                dataGridView2.DataSource = controller.search("thuoc", "idnhom", (comboBox1.SelectedIndex + 1).ToString()); 
+            }
+            controller.close();
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                iconButton1.PerformClick();
+                textBox1.Text = "";
+            }
         }
     }
 }
