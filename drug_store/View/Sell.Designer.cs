@@ -45,6 +45,7 @@
             this.ibtnThanhToanIn = new FontAwesome.Sharp.IconButton();
             this.ibtnLoaiBo = new FontAwesome.Sharp.IconButton();
             this.ibtncar = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -152,9 +153,9 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(657, 70);
+            this.textBox1.Location = new System.Drawing.Point(760, 70);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(291, 30);
+            this.textBox1.Size = new System.Drawing.Size(188, 30);
             this.textBox1.TabIndex = 9;
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
@@ -163,9 +164,9 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(29, 70);
+            this.comboBox1.Location = new System.Drawing.Point(528, 70);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(268, 33);
+            this.comboBox1.Size = new System.Drawing.Size(213, 33);
             this.comboBox1.TabIndex = 11;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -249,11 +250,23 @@
             this.ibtncar.UseVisualStyleBackColor = false;
             this.ibtncar.Click += new System.EventHandler(this.ibtncar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label2.Location = new System.Drawing.Point(24, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Bệnh nhân:";
+            // 
             // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1185, 790);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.textBox1);
@@ -293,5 +306,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Label label2;
     }
 }

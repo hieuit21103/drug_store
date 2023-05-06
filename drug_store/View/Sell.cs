@@ -9,9 +9,21 @@ namespace drug_store.View
     public partial class Sell : Form
     {
         private string username;
-        public Sell(string username)
+        private string name;
+        private int id = -1;
+        private Home parent;
+        public Sell(Home parent, string username)
         {
+            this.parent = parent;
             this.username = username;
+            InitializeComponent();
+        }
+        public Sell(Home parent, string username, int id, string name)
+        {
+            this.parent = parent;
+            this.username = username;
+            this.id = id;
+            this.name = name;
             InitializeComponent();
         }
 
@@ -26,8 +38,8 @@ namespace drug_store.View
             {
                 comboBox1.Items.Add(type);
             }
-            
             controller.close();
+            label2.Text += name;
         }
 
         private void ibtncar_Click(object sender, EventArgs e)
@@ -73,6 +85,19 @@ namespace drug_store.View
 
         private void ibtnThanhToanIn_Click(object sender, EventArgs e)
         {
+            if (id != -1)
+            {
+                if(GetInvoice() != null) GetInvoice().generate(username,name);
+            }
+            else
+            {
+                if(GetInvoice() != null) parent.OpenChildForm(new Customer(parent, username, 1, GetInvoice()));
+            }
+
+        }
+
+        public Invoice GetInvoice()
+        {
             int size = dataGridView1.Rows.Count;
             List<int> id = new List<int>();
             List<int> quantity = new List<int>();
@@ -86,12 +111,14 @@ namespace drug_store.View
                     quantity.Add(quantity1);
                 }
                 Invoice invoice = new Invoice(id, quantity, size);
-                invoice.generate(username);
+                return invoice;
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn sản phẩm!");
+                MessageBox.Show("Vui lòng nhập sản phẩm");
             }
+            return null;
+            
 
         }
 
@@ -118,7 +145,7 @@ namespace drug_store.View
             }
             else
             {
-                dataGridView2.DataSource = controller.search("thuoc", "idnhom", (comboBox1.SelectedIndex + 1).ToString()); 
+                dataGridView2.DataSource = controller.search("thuoc", "idnhom", (comboBox1.SelectedIndex).ToString()); 
             }
             controller.close();
         }

@@ -133,7 +133,7 @@ namespace drug_store.View
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Sell(username));
+            OpenChildForm(new Sell(this,username));
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -149,6 +149,16 @@ namespace drug_store.View
         private void ibtnHome_Click(object sender, EventArgs e)
         {
             currentChildForm.Close();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Customer(this,username));
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Report());
         }
     }
 }

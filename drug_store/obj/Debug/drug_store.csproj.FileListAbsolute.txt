@@ -92,3 +92,6 @@ C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\SqlServerTypes\
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.Customer.resources
+C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.Report.resources
+C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.AddCustomer.resources

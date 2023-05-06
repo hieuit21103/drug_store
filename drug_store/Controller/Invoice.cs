@@ -6,7 +6,7 @@ using System.IO;
 
 namespace drug_store.Controller
 {
-    internal class Invoice
+    public class Invoice
     {
         private int size;
         private List<int> id;
@@ -17,7 +17,7 @@ namespace drug_store.Controller
             this.quantity = quantity;
             this.size = size;
         }
-        public void generate(string username)
+        public void generate(string username,string name)
         {
 
             int total = 0;
@@ -50,7 +50,7 @@ namespace drug_store.Controller
             controller.close();
             paragraph.Range.Font.Bold = 0;
             paragraph.Range.Font.Size = 16;
-            paragraph.Range.Text = $"Người lập: {sender[1]}\nMã nhân viên: {sender[0]}\nNgày lập: {today.ToString("dd-MM-yyyy hh:mm:ss")}\n";
+            paragraph.Range.Text = $"Người lập: {sender[1]}\nMã nhân viên: {sender[0]}\nNgày lập: {today.ToString("dd-MM-yyyy hh:mm:ss")}\nBệnh nhân: {name}\n";
             paragraph.Format.SpaceAfter = 12;
             Table table = document.Tables.Add(paragraph.Range, size + 2, 4);
             table.Borders.Enable = 1;
@@ -61,10 +61,10 @@ namespace drug_store.Controller
             DbController dbController = new DbController();
             for (int i = 2; i <= size+1; i++)
             {
+                table.Rows[i].Cells[1].Range.Text = (i-1).ToString();
                 for (int j = 0; j < id.Count; j++)
                 {
                     List<string> data = dbController.getMedData(id[j]);
-                    table.Rows[i].Cells[1].Range.Text = id[j].ToString();
                     table.Rows[i].Cells[2].Range.Text = data[5];
                     table.Rows[i].Cells[3].Range.Text = quantity[j].ToString();
                     table.Rows[i].Cells[4].Range.Text = (Int32.Parse(data[4]) * quantity[j]).ToString();
@@ -84,9 +84,5 @@ namespace drug_store.Controller
             dbController.close();
         }
 
-        public void save()
-        {
-
-        }
     }
 }

@@ -36,6 +36,7 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.ibtnMedicineVlyCheck = new FontAwesome.Sharp.IconButton();
             this.ibtnAddMedicine = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.ibtnNewMedicine = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -61,6 +62,7 @@
             this.panelMenu.Controls.Add(this.iconButton1);
             this.panelMenu.Controls.Add(this.ibtnMedicineVlyCheck);
             this.panelMenu.Controls.Add(this.ibtnAddMedicine);
+            this.panelMenu.Controls.Add(this.iconButton4);
             this.panelMenu.Controls.Add(this.ibtnNewMedicine);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -80,7 +82,7 @@
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 593);
+            this.iconButton2.Location = new System.Drawing.Point(0, 658);
             this.iconButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(220, 69);
@@ -100,7 +102,7 @@
             this.ibtnLogout.IconColor = System.Drawing.Color.White;
             this.ibtnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnLogout.Location = new System.Drawing.Point(0, 524);
+            this.ibtnLogout.Location = new System.Drawing.Point(0, 589);
             this.ibtnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnLogout.Name = "ibtnLogout";
             this.ibtnLogout.Size = new System.Drawing.Size(220, 69);
@@ -120,7 +122,7 @@
             this.ibtnProfile.IconColor = System.Drawing.Color.White;
             this.ibtnProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnProfile.Location = new System.Drawing.Point(0, 455);
+            this.ibtnProfile.Location = new System.Drawing.Point(0, 520);
             this.ibtnProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnProfile.Name = "ibtnProfile";
             this.ibtnProfile.Size = new System.Drawing.Size(220, 69);
@@ -140,14 +142,15 @@
             this.iconButton3.IconColor = System.Drawing.Color.White;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 386);
+            this.iconButton3.Location = new System.Drawing.Point(0, 451);
             this.iconButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(220, 69);
             this.iconButton3.TabIndex = 4;
-            this.iconButton3.Text = "Doanh Thu";
+            this.iconButton3.Text = "Revenue";
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton1
             // 
@@ -159,7 +162,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 317);
+            this.iconButton1.Location = new System.Drawing.Point(0, 382);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(220, 69);
@@ -179,7 +182,7 @@
             this.ibtnMedicineVlyCheck.IconColor = System.Drawing.Color.White;
             this.ibtnMedicineVlyCheck.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnMedicineVlyCheck.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnMedicineVlyCheck.Location = new System.Drawing.Point(0, 252);
+            this.ibtnMedicineVlyCheck.Location = new System.Drawing.Point(0, 317);
             this.ibtnMedicineVlyCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnMedicineVlyCheck.Name = "ibtnMedicineVlyCheck";
             this.ibtnMedicineVlyCheck.Size = new System.Drawing.Size(220, 65);
@@ -199,7 +202,7 @@
             this.ibtnAddMedicine.IconColor = System.Drawing.Color.White;
             this.ibtnAddMedicine.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnAddMedicine.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ibtnAddMedicine.Location = new System.Drawing.Point(0, 187);
+            this.ibtnAddMedicine.Location = new System.Drawing.Point(0, 252);
             this.ibtnAddMedicine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnAddMedicine.Name = "ibtnAddMedicine";
             this.ibtnAddMedicine.Size = new System.Drawing.Size(220, 65);
@@ -208,6 +211,26 @@
             this.ibtnAddMedicine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnAddMedicine.UseVisualStyleBackColor = true;
             this.ibtnAddMedicine.Click += new System.EventHandler(this.ibtnAddMedicine_Click);
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.ForeColor = System.Drawing.Color.Transparent;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.List;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.Location = new System.Drawing.Point(0, 187);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(220, 65);
+            this.iconButton4.TabIndex = 8;
+            this.iconButton4.Text = "View Customers";
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // ibtnNewMedicine
             // 
@@ -348,5 +371,6 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton iconButton4;
     }
 }
