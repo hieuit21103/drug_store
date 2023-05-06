@@ -28,6 +28,7 @@ namespace drug_store.View
             this.type = type;
             this.invoice = invoice;
             InitializeComponent();
+            label1.Text = "Chọn bệnh nhân";
         }
 
 
@@ -120,7 +121,8 @@ namespace drug_store.View
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            parent.OpenChildForm(new AddCustomer());
+            AddCustomer form = new AddCustomer();
+            form.ShowDialog();
         }
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

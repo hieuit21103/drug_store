@@ -129,9 +129,30 @@ namespace drug_store.View
         private void List_Load(object sender, EventArgs e)
         {
             DbController controller = new DbController();
+            dataGridView1.DataSource = controller.getDataTable("thuoc");
+            List<string> types = controller.getType();
+            comboBox1.Items.Add("None");
+            comboBox1.SelectedIndex = 0;
+            foreach (string type in types)
+            {
+                comboBox1.Items.Add(type);
+            }
+            controller.close();
             refresh();
         }
 
-        
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DbController controller = new DbController();
+            if (comboBox1.SelectedIndex == 0)
+            {
+                dataGridView1.DataSource = controller.getDataTable("thuoc");
+            }
+            else
+            {
+                dataGridView1.DataSource = controller.search("thuoc", "idnhom", (comboBox1.SelectedIndex).ToString());
+            }
+            controller.close();
+        }
     }
 }
