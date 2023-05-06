@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
+using System.Windows.Markup;
 
 namespace drug_store.Controller.Database
 {
@@ -148,6 +149,14 @@ namespace drug_store.Controller.Database
         public void close()
         {
             connection.Close();
+        }
+        public DataTable view_report(DateTime fist, DateTime last)
+        {
+            DataTable dataTable = new DataTable();
+            string query = $"SELECT * FROM lichsugiaodich WHERE ngaygd >= '{fist}' AND ngaygd <= '{last}'";
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, connection);
+            adapter.Fill(dataTable);
+            return dataTable;
         }
     }
 }
