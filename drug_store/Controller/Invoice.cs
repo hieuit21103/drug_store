@@ -8,6 +8,8 @@ namespace drug_store.Controller
 {
     public class Invoice
     {
+        private int total = 0;
+        private float paid = 0;
         private int size;
         private List<int> id;
         private List<int> quantity;
@@ -19,9 +21,6 @@ namespace drug_store.Controller
         }
         public void generate(string username,string name)
         {
-
-            int total = 0;
-            float paid = 0;
             TimeZoneInfo localTimeZone = TimeZoneInfo.Local;
             DateTimeOffset now = TimeZoneInfo.ConvertTime(DateTimeOffset.Now, localTimeZone);
             string debugPath = Directory.GetCurrentDirectory();
@@ -79,7 +78,7 @@ namespace drug_store.Controller
             table.Rows[size + 2].Cells[1].Range.Text = "Tổng";
             table.Rows[size + 2].Cells[3].Range.Text = $"{total}";
             table.Rows[size + 2].Cells[4].Range.Text = $"{paid}";
-            document.SaveAs($"{projectPath}\\Invoices\\{today.ToString("dd-MM-yyyy hh-mm-ss")}.docx");
+            document.SaveAs($"{projectPath}\\Invoices\\{today.ToString("dd-MM-yyyy hh-mm-ss")}.pdf");
             wordApp.Quit();
             dbController.close();
         }

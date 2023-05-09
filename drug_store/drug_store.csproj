@@ -141,6 +141,12 @@
     <Compile Include="View\Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddStaff.Designer.cs">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,11 +159,23 @@
     <Compile Include="View\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EditStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditStaff.Designer.cs">
+      <DependentUpon>EditStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\List.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\List.Designer.cs">
       <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListStaff.Designer.cs">
+      <DependentUpon>ListStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Profile.cs">
       <SubType>Form</SubType>
@@ -208,14 +226,23 @@
     <EmbeddedResource Include="View\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AddStaff.resx">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\EditStaff.resx">
+      <DependentUpon>EditStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\List.resx">
       <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListStaff.resx">
+      <DependentUpon>ListStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>

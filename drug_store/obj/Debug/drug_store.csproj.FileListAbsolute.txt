@@ -150,3 +150,6 @@ C:\Users\Admin\source\repos\drug_store\drug_store\obj\Debug\drug_store.csproj.Co
 C:\Users\Admin\source\repos\drug_store\drug_store\obj\Debug\drug_store.csproj.CopyComplete
 C:\Users\Admin\source\repos\drug_store\drug_store\obj\Debug\drug_store.exe
 C:\Users\Admin\source\repos\drug_store\drug_store\obj\Debug\drug_store.pdb
+C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.ListStaff.resources
+C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.AddStaff.resources
+C:\Users\HIEU\Desktop\drug_store\drug_store\drug_store\obj\Debug\drug_store.View.EditStaff.resources

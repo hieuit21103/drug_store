@@ -160,5 +160,13 @@ namespace drug_store.View
         {
             OpenChildForm(new Report());
         }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            if (type == 0)
+            {
+                OpenChildForm(new ListStaff(this, type));
+            }
+        }
     }
 }

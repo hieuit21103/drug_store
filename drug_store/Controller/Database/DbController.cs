@@ -115,6 +115,26 @@ namespace drug_store.Controller.Database
             return list;
         }
 
+        public List<string> getPersonData(int id)
+        {
+            List<string> list = new List<string>();
+            string cmd = $"SELECT * FROM NHANVIEN WHERE ID={id}";
+            SQLiteCommand command = new SQLiteCommand(cmd, connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                list.Add(reader["id"].ToString());
+                list.Add(reader["ten"].ToString());
+                list.Add(reader["gioitinh"].ToString());
+                list.Add(reader["diachi"].ToString());
+                list.Add(reader["sdt"].ToString());
+                list.Add(reader["email"].ToString());
+                list.Add(reader["luong"].ToString());
+                list.Add(reader["ngaylam"].ToString());
+            }
+            return list;
+        }
+
         public Dictionary<int, string> getDataList(string tableName, string columnName)
         {
             Dictionary<int, string> result = new Dictionary<int, string>();
